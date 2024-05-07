@@ -5,6 +5,7 @@
 }
 body{
      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(26, 2, 2)), url(https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wqI5?ver=bfb7);
+     position: relative;
 }
 .main{
      padding: 20px 40px;
@@ -63,6 +64,8 @@ body{
      outline: none;
      height: 40px;
      width: 700px;
+     color: #fff;
+     font-size: 20px;
 }
 .icons{
      margin: 0 auto;
@@ -131,7 +134,18 @@ input::placeholder{
  .news-description {
      font-size: 14px;
  }
- /* Day 16 :-: I dont want to loose streak */
- /* Day 17 :-: I dont want to loose streak */
- /* Day 18 :-: I dont want to loose streak */
- /* Day 20 :-: I dont want to loose streak */
+.searchResult{
+     width: 60vw;
+     background-color: #181818;
+     position: absolute;
+     top: 12vh;
+     left: 20vw;
+     height: max-content;
+}
+#searchResult-Each{
+     height: 100px;
+     border-bottom: 3px solid #8f8f8f;
+}
+#searchResult-Each:hover{
+     background-color: #333;
+}
