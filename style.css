@@ -1,0 +1,137 @@
+*{
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+}
+body{
+     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(26, 2, 2)), url(https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wqI5?ver=bfb7);
+}
+.main{
+     padding: 20px 40px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.dd{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 20px;
+}
+.name{
+     font-size: 20px;
+     font-weight: 800;
+     color: #fff;
+}
+.img{
+     height: 20px;
+     font-size: 20px;
+     color: #fff;
+}
+.micam img{
+     border-radius: 100%;
+     width: 100%;
+     height: 100%;
+}
+.box{
+     margin: 0 auto;
+     padding: 15px;
+     height: 50px;
+     width: 100%;
+     border-radius: 50px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     background-color: #333;
+}
+.nameee{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 10px;
+}
+.micam{
+     height: 20px;
+     width: 20px;
+}
+#inputs{
+     background-color: transparent;
+     border: none;
+     outline: none;
+     height: 40px;
+     width: 700px;
+}
+.icons{
+     margin: 0 auto;
+     width: 50vw;
+     display: flex;
+     gap: 20px;
+     color: #fff;
+}
+.con .bi{
+     font-size: 20px;
+     color: #fff;
+}
+.cons{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+.con{
+     padding: 10px;
+     width: max-content;
+     height: max-content;
+     border-radius: 30%;
+     /* border: 2px solid #fff; */
+     background-color: rgba(17, 17, 17, 0.603);
+}
+input::placeholder{
+     color: #ffffffb3;
+     text-align: left;
+     font-size: 17px;
+}
+.newssss{
+     background-color: #181818;
+     border-radius: 20px;
+     margin: 10px 30px;
+     padding: 20px;
+}
+#news-container {
+     margin: 0 auto;
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ }
+ .news{
+     height: 300px;
+     text-decoration: none;
+     color: #fff;
+ }
+ .news-article {
+     /* border: 1px solid #ccc; */
+     background-color: #333;
+     border-radius: 8px;
+     margin-bottom: 10px;
+     padding: 10px;
+ }
+ .news-image img{
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+ }
+ .news-title {
+     font-size: 18px;
+     font-weight: bold;
+     margin-bottom: 5px;
+     border-bottom: 1px solid #8f8f8f;
+ }
+ 
+ .news-description {
+     font-size: 14px;
+ }
+ /* Day 16 :-: I dont want to loose streak */
+ /* Day 17 :-: I dont want to loose streak */
+ /* Day 18 :-: I dont want to loose streak */
+ /* Day 20 :-: I dont want to loose streak */
