@@ -42,7 +42,10 @@ let close = document.querySelector('.close').addEventListener('click', ()=> {
      searchResultssss.style.display = 'none'
 });
 
-document.querySelector('.searchh').addEventListener('click', () => {
+document.querySelector('.searchh').addEventListener('click',displayResults);
+searchInput.addEventListener('focus',displayResults)
+
+function displayResults () {
      searchResultssss.style.display = 'block'
     // Function to filter items based on a search query
     function filterItems(query) {
@@ -74,8 +77,7 @@ document.querySelector('.searchh').addEventListener('click', () => {
         `
         searchResultContainer.appendChild(searchResultEach);
     });
-});
-
+}
 
 // Sample array of items
 const items = [
