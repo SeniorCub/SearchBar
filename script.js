@@ -43,7 +43,7 @@ let close = document.querySelector('.close').addEventListener('click', ()=> {
 });
 
 document.querySelector('.searchh').addEventListener('click',displayResults);
-searchInput.addEventListener('focus',displayResults)
+searchInput.addEventListener('input',displayResults);
 
 function displayResults () {
      searchResultssss.style.display = 'block'
