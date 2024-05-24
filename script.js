@@ -6,11 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
      fetch(apiUrl)
          .then(response => response.json())
          .then(data => {
-             if (data.status === 'ok') {
-                 displayNews(data.articles);
-             } else {
-                 console.error('Error fetching news:', data.message);
-             }
+               displayNews(data.articles);
          })
          .catch(error => {
              console.error('Error fetching news:', error);
