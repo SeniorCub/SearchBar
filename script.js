@@ -6,75 +6,64 @@ document.addEventListener('DOMContentLoaded', function () {
      fetch(apiUrl)
          .then(response => response.json())
          .then(data => {
-               displayNews(data.articles);
+             displayNews(data.articles);
          })
          .catch(error => {
              console.log('Error fetching news:', error);
          });
-});
-
-// Display news articles on the page
-function displayNews(articles) {
+ });
+ 
+ // Display news articles on the page
+ function displayNews(articles) {
      const newsContainer = document.getElementById('news-container');
      articles.forEach(article => {
-          const articleElement = document.createElement('div');
-          articleElement.className = 'news-article';
-          articleElement.innerHTML = `
-               <a href="${article.url}" class="news" target="_blank">
-                    <div class="news-image"><img src="${article.urlToImage
-                    }" ></div>
-                    <div class="news-title">${article.title}</div>
-                    <div class="news-description">${article.description}</div>
-               </a>
-          `;
-          newsContainer.appendChild(articleElement);
+         const articleElement = document.createElement('div');
+         articleElement.className = 'news-article';
+         articleElement.innerHTML = `
+             <a href="${article.url}" class="news" target="_blank">
+                 <div class="news-image"><img src="${article.urlToImage}" alt="Image"></div>
+                 <div class="news-title">${article.title}</div>
+                 <div class="news-description">${article.description}</div>
+             </a>
+         `;
+         newsContainer.appendChild(articleElement);
      });
-}
- 
-let searchInput = document.querySelector('#inputs');
-let searchResultContainer = document.querySelector('#searchResult-container');
-let searchResultssss = document.querySelector('.searchResult');
-let close = document.querySelector('.close').addEventListener('click', ()=> {
-     searchResultssss.style.display = 'none'
-});
+ }
 
-document.querySelector('.searchh').addEventListener('click',displayResults);
-searchInput.addEventListener('input',displayResults);
+ let searchInput = document.querySelector('#inputs');
+ let searchResultContainer = document.querySelector('#searchResult-container');
+ let searchResultssss = document.querySelector('.searchResult');
+ let close = document.querySelector('.close').addEventListener('click', ()=> {
+     searchResultssss.style.display = 'none';
+ });
 
-function displayResults () {
-     searchResultssss.style.display = 'block'
-    // Function to filter items based on a search query
-    function filterItems(query) {
-        return items.filter(item =>
-            item.name.toLowerCase().includes(query.toLowerCase()) ||
-            item.club.toLowerCase().includes(query.toLowerCase()) ||
-            item.country.toLowerCase().includes(query.toLowerCase()) ||
-            (typeof item.number === 'number' && item.number.toString().includes(query))
-        );
-    }
+ document.querySelector('.searchh').addEventListener('click', displayResults);
+ searchInput.addEventListener('input', displayResults);
 
-    let searchTerm = searchInput.value.toLowerCase();
-    const filteredItems = filterItems(searchTerm);
+ function displayResults() {
+     searchResultssss.style.display = 'block';
 
-    // Clear previous search results
-    searchResultContainer.innerHTML = '';
+     let searchTerm = searchInput.value.toLowerCase();
+     const filteredItems = filterItems(searchTerm);
 
-    // Iterate over filtered items and create HTML elements
-    filteredItems.forEach(item => {
-        let searchResultEach = document.createElement('div');
-        searchResultEach.classList.add('searchResult-Each');
+     // Clear previous search results
+     searchResultContainer.innerHTML = '';
 
-        searchResultEach.innerHTML =`
-          <div class="imags"><img src="${item.image}" alt="${item.name}"></div>
-          <div class="namee">${item.name}</div>
-          <div class="club">${item.club}</div>
-          <div class="number">${item.number}</div>
-          <div class="country">${item.country}</div>
-        `
-        searchResultContainer.appendChild(searchResultEach);
-    });
-}
+     // Iterate over filtered items and create HTML elements
+     filteredItems.forEach(item => {
+         let searchResultEach = document.createElement('div');
+         searchResultEach.classList.add('searchResult-Each');
 
+         searchResultEach.innerHTML =`
+             <div class="imags"><img src="${item.image}" alt="${item.name}"></div>
+             <div class="namee">${item.name}</div>
+             <div class="club">${item.club}</div>
+             <div class="number">${item.number}</div>
+             <div class="country">${item.country}</div>
+         `;
+         searchResultContainer.appendChild(searchResultEach);
+     });
+ }
 // Sample array of items
 const items = [
 //     Names of footballers, current club, country, number, player picture url from a football site, 50 players, give each id
@@ -122,3 +111,11 @@ const items = [
      { id: 42, name: 'Casemiro', club: 'Real Madrid', country: 'Brazil', number: 14, image: 'https://www.google.com/search?q=casemiro+images&rlz=1C1GCEU_enKE832KE832&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiZ3YKz1JjzAhVQ8hQKHZJ6D6IQ_AUIBigB&biw=1366&bih=657#imgrc=2e2u7v5qOZbJrM' },
      { id: 43, name: 'Sergio Busquets', club: 'Barcelona', country: 'Spain', number: 5, image: 'https://www.google.com/search?q=sergio+busquets+images&rlz=1C1GCEU_enKE832KE832&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiZ3YKz1JjzAhVQ8hQKHZJ6D6IQ_AUIBigB&biw=1366&bih=657#imgrc=2e2u7v5qOZbJrM' },
 ];
+function filterItems(query) {
+     return items.filter(item =>
+         item.name.toLowerCase().includes(query) ||
+         item.club.toLowerCase().includes(query) ||
+         item.country.toLowerCase().includes(query) ||
+         item.number.toString().includes(query)
+     );
+ }
