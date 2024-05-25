@@ -66,8 +66,8 @@ document.addEventListener('DOMContentLoaded', function () {
  }
 // Sample array of items
 const items = [
-//     Names of footballers, current club, country, number, player picture url from a football site, 50 players, give each id
-     { id: 1, name: 'Cristiano Ronaldo', club: 'Manchester United', country: 'Portugal', number: 7, image: 'https://www.google.com/search?q=cristiano+ronaldo+images&rlz=1C1GCEU_enKE832KE832&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiZ3YKz1JjzAhVQ8hQKHZJ6D6IQ_AUIBigB&biw=1366&bih=657#imgrc=2e2u7v5qOZbJrM' },
+//     Names of footballers, current club, country, number, player picture url from a football wikimedia, 50 players, give each id
+     { id: 1, name: 'Cristiano Ronaldo', club: 'Manchester United', country: 'Portugal', number: 7, image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Cristiano_Ronaldo_playing_for_Al_Nassr_FC_against_Persepolis%2C_September_2023_%28cropped%29.jpg/640px-Cristiano_Ronaldo_playing_for_Al_Nassr_FC_against_Persepolis%2C_September_2023_%28cropped%29.jpg' },
      { id: 2, name: 'Lionel Messi', club: 'Paris Saint-Germain', country: 'Argentina', number: 30, image: 'https://www.google.com/search?q=lionel+messi+images&rlz=1C1GCEU_enKE832KE832&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiZ3YKz1JjzAhVQ8hQKHZJ6D6IQ_AUIBigB&biw=1366&bih=657#imgrc=2e2u7v5qOZbJrM' },
      { id: 3, name: 'Neymar Jr', club: 'Paris Saint-Germain', country: 'Brazil', number: 10, image: 'https://www.google.com/search?q=neymar+jr+images&rlz=1C1GCEU_enKE832KE832&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiZ3YKz1JjzAhVQ8hQKHZJ6D6IQ_AUIBigB&biw=1366&bih=657#imgrc=2e2u7v5qOZbJrM' },
      { id: 4, name: 'Kylian Mbappe', club: 'Paris Saint-Germain', country: 'France', number: 7, image: 'https://www.google.com/search?q=kylian+mbappe+images&rlz=1C1GCEU_enKE832KE832&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiZ3YKz1JjzAhVQ8hQKHZJ6D6IQ_AUIBigB&biw=1366&bih=657#imgrc=2e2u7v5qOZbJrM' },
