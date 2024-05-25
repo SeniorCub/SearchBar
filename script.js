@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
                displayNews(data.articles);
          })
          .catch(error => {
-             console.error('Error fetching news:', error);
+             console.log('Error fetching news:', error);
          });
 });
 
